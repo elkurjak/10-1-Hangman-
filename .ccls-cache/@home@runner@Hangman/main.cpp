@@ -2,7 +2,18 @@
 #include <iomanip>
 #include <string>
 using namespace std;
+
+int findNumOfUniqueCharInStr(string myString);
+
 int main() {
+  string word;
+  string guess;
+  int length = findNumOfUniqueCharInStr(word);
+
+  int parts = 0;
+
+  cin >> word;
+  cin >> guess;
   
 }
 
