@@ -1,14 +1,15 @@
 #include <iostream>
-
+#include <iomanip>
+#include <string>
+using namespace std;
 int main() {
-  std::cout << "Hello World!\n";
+  
 }
+
 // find the unique values in a string
 
 
 int findNumOfUniqueCharInStr(string myString) {
-
- 
 
   const int L = myString.length();
 
@@ -16,10 +17,7 @@ int findNumOfUniqueCharInStr(string myString) {
 
   int n, k;
 
- 
-
   // setup unique to store the first value of the string and then
-
   // all NULLs
 
   unique[0] = myString[0];
@@ -32,23 +30,14 @@ int findNumOfUniqueCharInStr(string myString) {
 
   }
 
- 
-
   int j = 1;
 
   bool FLAG;
 
- 
-
   // fill unique
-
   for (n = 1; n < L; n++) {
 
- 
-
     FLAG = false; // meaning it does not exist
-
- 
 
     for (k = 0; k < L; k++) {
 
@@ -57,8 +46,6 @@ int findNumOfUniqueCharInStr(string myString) {
         FLAG = true;
 
     }
-
- 
 
     // if it didn't exist we will add it in to unique
 
@@ -71,5 +58,9 @@ int findNumOfUniqueCharInStr(string myString) {
     }
 
   }
+
+ 
+
   return j;
+
 }
