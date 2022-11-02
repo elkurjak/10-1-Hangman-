@@ -1,21 +1,9 @@
 #include <iostream>
-#include <iomanip>
-#include <string>
+
+#include <cstring>
 using namespace std;
 
-int findNumOfUniqueCharInStr(string myString);
 
-int main() {
-  string word;
-  string guess;
-  int length = findNumOfUniqueCharInStr(word);
-
-  int parts = 0;
-
-  cin >> word;
-  cin >> guess;
-  
-}
 
 // find the unique values in a string
 
@@ -74,4 +62,33 @@ int findNumOfUniqueCharInStr(string myString) {
 
   return j;
 
+}
+int main() {
+  string word;
+  string guess;
+  cin >> word;
+  cin >> guess;
+  
+  int length = findNumOfUniqueCharInStr(word);
+
+  int parts = 0;
+
+  
+
+  for(int i = 0; i < 26; i++){
+     if (word.find(guess[i]) != string::npos){
+       length--;
+     }
+     else{
+       parts++;
+     }
+    if (parts == 10){
+      cout << "LOSE";
+      break;
+    }
+    if(length == 0){
+      cout <<"WIN";
+      break;
+    }
+  }  
 }
